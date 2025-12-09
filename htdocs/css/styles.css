@@ -1,0 +1,565 @@
+/* RESET (for cleaner formatting) */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Cambria";
+}
+
+/* Background: soft gradient for warmth */
+body{
+    size: 20px;
+    margin: 5%;
+    padding: 0;
+    background-color: #f7f5f3;
+    background-image:
+    linear-gradient(#ff292980 1px, transparent 2px),
+    linear-gradient(90deg, #ff292980 1px, transparent 2px);
+    background-size:90px 90px; /* grid cell size */
+}
+
+/* Logo area */
+.logo img{
+    border-radius: 100%;
+    display:block;
+    margin:0 auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Gentle bouncing animation */
+@keyframes float {
+    0%{ transform:translateY(0);}
+    50%{ transform:translateY(-6px);}
+    100%{ transform:translateY(0);}
+}
+
+.main-title {  /* add this class to your title */
+    letter-spacing: 1.5px;
+    transform: translateY(-20px) scale(1);     /* include scale(1) as baseline */
+    animation: fadeSlide 0.8s ease-out forwards;
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* <-- transition ON the base element */
+    will-change: transform, opacity;
+
+}
+
+/* Heading with playful feel */
+.Title h1{
+    text-align:center;
+    font-size:2.3rem;
+    color:#63151f;
+    font-weight:800;
+    text-shadow:2px 2px 0px #ffa4b5;
+    margin-bottom:10px;
+}
+
+/* Intro tagline */
+.Title p{
+    text-align:center;
+    font-size:1.1rem;
+    color:#63151f;
+    background:#ffffffb9;
+    border: 2px solid black;
+    padding:10px 20px;
+    border-radius:12px;
+    width:fit-content;
+    margin:0 auto 25px auto;
+    box-shadow:0 0 10px #00000010;
+}
+
+/* Navigation Bar */
+.nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#e68e92e7;
+    border: 2px solid black;
+    padding:7px 50px;
+    border-radius:50px;
+    margin:20px auto;
+    width:max-content;
+    box-shadow:0 4px 10px #00000020;
+}
+
+/* Nav buttons cute hover */
+.nav a{
+    text-decoration:none;
+    color:#fff;
+    background:#a84050;
+    padding:10px 17px;
+    border-radius:20px;
+    transition:0.3s;
+    font-weight:600;
+}
+.nav a:hover{
+    background:#fff;
+    color:#a84050;
+    transform:scale(1.1);
+}
+p{
+    font-size: 18px;
+    line-height: 1.50;
+    letter-spacing: 0.3px;
+    
+}
+
+.About-us a:link{
+    text-decoration: none;
+    color: black;
+}
+
+.About-us a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.About-us a:hover{
+    text-decoration: none;
+    color: rgb(190, 0, 0);
+
+}
+
+/* CONTENT BOXES */
+.Content{
+    background:#ffffffb8;
+    padding:25px;
+    border: 2px solid black;
+    border-radius:20px;
+    box-shadow:0 0 20px #00000020;
+    margin:25px auto;
+    width:50%;
+    transform: translateY(-20px) scale(1);     /* include scale(1) as baseline */
+    animation: fadeSlide 0.8s ease-out forwards;
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* <-- transition ON the base element */
+    will-change: transform, opacity;
+    
+}
+
+/* final frame of the entrance animation explicitly uses scale(1) */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Sub-headings */
+h2{
+    color:#803f44;
+    margin-top:18px;
+}
+/* Default state */
+.problem p {
+    transition: 0.4s;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Hover effect only for paragraphs inside .problem */
+.problem p:hover {
+    background: #ffd4ddb7;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Related Websites Styling */
+ul{
+    width:fit-content;
+    margin:auto;
+    text-align:left;
+}
+ul li{
+    margin:6px;
+}
+ul a{
+    color:#6f2e3b;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
+}
+ul a:hover{
+    color:#ff00b3;
+    text-decoration:underline;
+    font-size:105%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 35px;
+}
+
+/* Search expands when clicked */
+.search-area {
+    display: flex;
+    align-items: center;
+    background: #ffd8dc;
+    padding: 6px 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px #00000020;
+    transition: 0.4s;
+}
+
+.search-area:hover {
+    transform: scale(1.05);
+}
+
+/* input expands when typing */
+.search-area input {
+    width: 140px;
+    transition: 0.4s;
+    padding: 7px 10px;
+    border-radius: 18px;
+    border: none;
+}
+
+.search-area input:focus {
+    width: 220px;
+    background: #ffffff;
+    outline: none;
+}
+
+/*ahahahahahah*/
+.search-area button {
+    padding: 8px 14px;
+    background:#a84050;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 18px;
+    margin-left: 6px;
+}
+
+.search-area button:hover {
+    background: #b55057;
+}
+
+footer{
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.statspart{
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #ffffffcf;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00000020;
+    width: 65%;            /* adjust how wide the text area is */
+}
+
+.heads{
+    margin: 0 auto;
+    padding: 3%;
+}
+
+/* Statistics image presentation */
+.bummer img{
+    display:block;
+    margin: auto;
+    border-radius:18px;
+    box-shadow:0 0 20px #00000030;
+}
+
+.bummer{
+    /*margin: 20px;*/
+    width: 42%;
+}
+
+.bummer, .statspoo {
+    /*border: 1px solid black;*/
+    display: inline-block;
+    vertical-align: top;  /* aligns the tops */
+}
+
+/* right side */
+.statspoo {
+    /*border: 1px solid black;*/
+    width: 50%;
+    margin-left: 6%;  /* ✅ THIS prevents touching/overlap */
+    background: #ffffffcf;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00000020;
+    /*width: 50%;   /* <--- changed */
+    
+
+}
+
+.ref-box{
+    margin: 0 auto;
+    background: #ffffffcf;
+    padding: 25px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00000020;
+    width: 65%;            /* adjust how wide the text area is */
+    clear: right;
+}
+
+.shortbio{
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    background:#ffffffcf;
+    padding:25px;
+    border: 2px solid black;
+    border-radius:20px;
+    box-shadow:0 0 20px #00000020;
+    margin:30px auto;
+    width:60%;
+}
+
+footer{
+    text-align:center;
+    font-size:1.1rem;
+    color:#63151f;
+    background:#ffffffb9;
+    border: 2px solid black;
+    padding:10px 20px;
+    border-radius:12px;
+    width:fit-content;
+    margin: 0 auto;
+    margin-top: 7%;
+    box-shadow:0 0 10px #00000010;
+}
+
+.copyright{
+    text-align:center;
+    font-size:1.1rem;
+    color:#63151f;
+    background:#ffffffb9;
+    border: 2px solid black;
+    padding:10px 20px;
+    border-radius:12px;
+    width:fit-content;
+    margin: 0 auto;
+    margin-top: 7%;
+    box-shadow:0 0 10px #00000010;
+
+}
+
+.copyright a{
+    color: #63151f;
+    text-decoration: none;
+}
+
+.copyright a:visited{
+    color: #63151f;
+    text-decoration: none;
+}
+
+.copyright a:hover{
+    color: #ff0022;
+    text-decoration: none;
+}
+
+.contacts{
+    text-align: center;
+    background:#ffffffcf;
+    padding:25px;
+    border: 2px solid black;
+    border-radius:20px;
+    box-shadow:0 0 20px #00000020;
+    margin:25px auto;
+    width:90%;
+}
+
+.contacts h1{
+    color: #63151f;    
+}
+
+.whereyaheadingat{
+    background:#ffffffcf;
+    padding:25px;
+    border: 2px solid black;
+    border-radius:20px;
+    box-shadow:0 0 20px #00000020;
+    margin:25px auto;
+    width:90%;
+
+}
+
+.pics{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.pics img{
+    display: block;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow:0 0 20px #00000020;
+    transition: transform 0.25s ease;
+}
+
+.pics img:hover {
+  transform: scale(1.07);
+}
+
+/*ABOUT US PART*/
+
+/* CONTACT INFORMATION CARD */
+.contact-card {
+    width: 75%;
+    margin: 50px auto;
+    padding: 30px 35px;
+    background: #ffffffd8;
+    border: 2px dashed black;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px #00000020;
+    color: #4f3f41;
+}
+
+/* Header */
+.contact-card h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #7e3f3f;
+    margin-bottom: 20px;
+}
+
+/* Content spacing */
+.contact-block {
+    margin-bottom: 18px;
+}
+
+/* Office title */
+.office-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* Subtle note */
+.note {
+    font-size: 0.9rem;
+    color: #8f6a6a;
+}
+
+/* Links */
+.contact-card a {
+    color: #7a2e3b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #e27d8f;
+}
+
+/* Social line */
+.socials {
+    font-size: 0.95rem;
+    color: #7f555d;
+}
+
+.About-us p{
+    font-size: 18px;
+    line-height: 1.20;
+    letter-spacing: 0.3px;
+}
+
+.social-footer {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.social-icons {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+area {
+  cursor: pointer;
+}
+
+
+/**TEAM PART**/
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  width: 220px;
+  height: 360px; /* ✅ FIXED HEIGHT */
+  position: relative;
+  border: 2px solid black;
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  text-align: center;
+
+    /* subtle default transform */
+  transform: skew(0deg, 1deg) translateY(0px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+   transform: scale(1.05) translateY(-10px) skew(0deg, 0deg);
+  box-shadow: 0 12px 25px rgba(255, 0, 170, 0.45);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+/* ✅ Overlay description */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 171, 245, 0.96);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* ✅ ONLY hovered card shows overlay */
+.card:hover .card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.enveloped{
+    text-align: center;
+    background:#ffffffcf;
+    padding:25px;
+    border: 2px solid black;
+    border-radius:20px;
+    box-shadow:0 0 20px #00000020;
+    margin:30px auto;
+    width:40%;
+}
+
