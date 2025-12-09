@@ -1,0 +1,341 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Cambria";
+}
+
+/* Background: soft gradient for warmth */
+body{
+    size: 20px;
+    margin: 5%;
+    padding: 0;
+    background-color: #f7f5f3;
+    background-image:
+    linear-gradient(#ff292980 1px, transparent 2px),
+    linear-gradient(90deg, #ff292980 1px, transparent 2px);
+    background-size:90px 90px; /* grid cell size */
+}
+
+/* Logo area */
+.logo img{
+    border-radius: 100%;
+    display:block;
+    margin:0 auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Gentle bouncing animation */
+@keyframes float {
+    0%{ transform:translateY(0);}
+    50%{ transform:translateY(-6px);}
+    100%{ transform:translateY(0);}
+}
+
+.main-title {  /* add this class to your title */
+    letter-spacing: 1.5px;
+    transform: translateY(-20px) scale(1);     /* include scale(1) as baseline */
+    animation: fadeSlide 0.8s ease-out forwards;
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* <-- transition ON the base element */
+    will-change: transform, opacity;
+
+}
+
+/* Heading with playful feel */
+.Title h1{
+    text-align:center;
+    font-size:2.3rem;
+    color:#63151f;
+    font-weight:800;
+    text-shadow:2px 2px 0px #ffa4b5;
+    margin-bottom:10px;
+}
+
+/* Intro tagline */
+.Title p{
+    text-align:center;
+    font-size:1.1rem;
+    color:#63151f;
+    background:#ffffffb9;
+    border: 2px solid black;
+    padding:10px 20px;
+    border-radius:12px;
+    width:fit-content;
+    margin:0 auto 25px auto;
+    box-shadow:0 0 10px #00000010;
+}
+
+/* Navigation Bar */
+.nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background:#e68e92e7;
+    border: 2px solid black;
+    padding:7px 50px;
+    border-radius:50px;
+    margin:20px auto;
+    width:max-content;
+    box-shadow:0 4px 10px #00000020;
+}
+
+/* Nav buttons cute hover */
+.nav a{
+    text-decoration:none;
+    color:#fff;
+    background:#a84050;
+    padding:10px 17px;
+    border-radius:20px;
+    transition:0.3s;
+    font-weight:600;
+}
+.nav a:hover{
+    background:#fff;
+    color:#a84050;
+    transform:scale(1.1);
+}
+p{
+    font-size: 18px;
+    line-height: 1.50;
+    letter-spacing: 0.3px;
+    
+}
+
+
+/* final frame of the entrance animation explicitly uses scale(1) */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Sub-headings */
+h2{
+    color:#803f44;
+    margin-top:18px;
+}
+
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 35px;
+}
+
+/* Search expands when clicked */
+.search-area {
+    display: flex;
+    align-items: center;
+    background: #ffd8dc;
+    padding: 6px 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px #00000020;
+    transition: 0.4s;
+}
+
+.search-area:hover {
+    transform: scale(1.05);
+}
+
+/* input expands when typing */
+.search-area input {
+    width: 140px;
+    transition: 0.4s;
+    padding: 7px 10px;
+    border-radius: 18px;
+    border: none;
+}
+
+.search-area input:focus {
+    width: 220px;
+    background: #ffffff;
+    outline: none;
+}
+
+/*ahahahahahah*/
+.search-area button {
+    padding: 8px 14px;
+    background:#a84050;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 18px;
+    margin-left: 6px;
+}
+
+.search-area button:hover {
+    background: #b55057;
+}
+
+
+.copyright{
+    text-align:center;
+    font-size:1.1rem;
+    color:#63151f;
+    background:#ffffffb9;
+    border: 2px solid black;
+    padding:10px 20px;
+    border-radius:12px;
+    width:fit-content;
+    margin: 0 auto;
+    margin-top: 7%;
+    box-shadow:0 0 10px #00000010;
+
+}
+
+.copyright a{
+    color: #63151f;
+    text-decoration: none;
+}
+
+.copyright a:visited{
+    color: #63151f;
+    text-decoration: none;
+}
+
+.copyright a:hover{
+    color: #ff0022;
+    text-decoration: none;
+}
+
+/* Main container */
+.Content {
+  background:#ffffffb8;
+  padding:25px;
+  border: 2px solid black;
+  border-radius:20px;
+  box-shadow:0 0 20px #00000020;
+  margin:25px auto;
+  width:50%;
+  transform: translateY(-20px) scale(1);     /* include scale(1) as baseline */
+  animation: fadeSlide 0.8s ease-out forwards;
+  transition: transform 0.25s ease, box-shadow 0.25s ease; /* <-- transition ON the base element */
+  will-change: transform, opacity;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.donation-form label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+/* SCOPE EVERYTHING INSIDE THIS CONTAINER */
+.donation-section {
+
+  /* Inputs */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  /* :focus */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #ff5fa2;
+    box-shadow: 0 0 0 3px rgba(255,95,162,0.2);
+    outline: none;
+  }
+
+  /* :not */
+  input:not(:focus)::placeholder {
+    color: #aaa;
+  }
+
+  /* Donate button */
+  button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: 2px solid black;
+    background-color: #ff5fa2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.4s;
+  }
+
+  button:hover {
+    background-color: #ff3086;
+    transform: scale(1.03);
+  }
+
+  /* Nth-child */
+  .donation-form label:nth-child(3) {
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  /* POPUP BACKGROUND */
+  .popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+  }
+
+  .popup:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Popup box */
+  .popup-box {
+    background: white;
+    max-width: 420px;
+    margin: 25vh auto;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  }
+
+  .popup-box h2 {
+    margin-top: 0;
+  }
+
+  /* Close */
+  .close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background: #ff5fa2;
+    padding: 10px 22px;
+    border-radius: 20px;
+  }
+
+  .close-btn:hover {
+    background: #ff3b91;
+  }
+}
